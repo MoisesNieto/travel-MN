@@ -79,9 +79,10 @@ p {
     line-height: 2;
 }
 .navegacion {
-    background-color: #15B9D5;
+    background-color: #000;
 }
-header .nav a {
+
+header a {
     font-family: 'Staatliches', cursive;
     font-size: 2rem;
     color: white;
