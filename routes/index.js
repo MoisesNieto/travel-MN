@@ -1,30 +1,28 @@
 import express, { Router } from 'express';
+import {paginaInicio,
+        paginaNosotros, 
+        paginaTestimoniales,
+        paginaViajes, 
+        paginaDetalleViajes
+    } from '../controllers/controller.js'
+
+        import {
+            guardarTestimoniales
+
+        } from '../controllers/testimonial.js';
 
 
 const router = express.Router();
+router.get('/', paginaInicio );
+router.get('/nosotros', paginaNosotros );
+router.get('/viajes', paginaViajes );
 
-router.get('/', (req, res)=>{
-    res.render('home', {
-        pagina: 'Inicio'
-    });
+router.get('/viajes/:slug', paginaDetalleViajes);
 
-});
-router.get('/nosotros', (req,res)=>{
-    res.render('nosotros',{
-        pagina: 'Nosotros'
-    });
-});
-router.get('/viajes', (req,res)=>{
-    res.render('viajes',{
-        pagina: 'viajes'
-    });
-})
+router.get('/testimoniales',paginaTestimoniales )
+router.post('/testimoniales', guardarTestimoniales)
 
-router.get('/testimoniales', (req,res)=>{
-    res.render('testimoniales',{
-        pagina: 'testimoniales'
-    });
-})
+
 
 
 export default router;

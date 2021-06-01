@@ -4,6 +4,7 @@
   "description": "This project will deal with the development of a travel agency website.",
   "main": "index.js",
   "scripts": {
+    "start": "node server",
     "dev": "nodemon index.js"
   },
   "keywords": [
@@ -19,6 +20,7 @@
     "sequelize": "^6.6.2"
   },
   "devDependencies": {
+    "dotenv": "^10.0.0",
     "nodemon": "^2.0.7"
   }
 }
